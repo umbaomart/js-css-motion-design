@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,14 +74,32 @@
 		}
 
 		/* Air */
+		#media video {
+			border-radius: 1rem;
+			border: 1px solid #5521db;
+			object-fit: cover;
+		}
+
+		#media iframe {
+			border-radius: 1rem;
+			border: 1px solid #5521db;
+			object-fit: cover;
+		}
+
+		/* If you want to customize the look of the player use the following links
+		 * https://videojs.com/
+		 * 28:38
+		 */
 	</style>
 </head>
+
 <body>
 	<section id="feature">
 		<div id="content">
 			<header>
 				<h2>Lightning-Fast Data Transfers</h2>
-				<p class="large muted">Experience the power of lightning-fast data transfers, a standout feature of this revolutionary encryption solution.</p>
+				<p class="large muted">Experience the power of lightning-fast data transfers, a standout feature of this
+					revolutionary encryption solution.</p>
 			</header>
 
 			<div id="grid">
@@ -98,8 +117,15 @@
 		</div>
 
 		<div id="media">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/vqXLGX0szIQ?si=dZB_watJ1fqCWm9s"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen></iframe>
 			<!-- Air -->
+			<!-- <video src="./videos/video-1@c.mp4" width="640" height="320px" controls muted
+				poster="./images/video-poster.jpg">Your browser doesn't support HTML5 video tag</video> -->
 		</div>
 	</section>
 </body>
+
 </html>
