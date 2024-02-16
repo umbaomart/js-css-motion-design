@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,9 +52,20 @@
 			border: 1px solid #6E32EF;
 		}
 
+		.btn {
+			/* Must use this */
+			transition: background-color .4s ease-in-out, color .4s ease-in-out;
+			/* transition: all .4s ease-in-out; */
+		}
+
 		/* Air */
+		.btn:hover {
+			background-color: white;
+			color: #151618;
+		}
 	</style>
 </head>
+
 <body>
 	<header>
 		<a href="/"><img src="images/logo-l4.svg" alt="Logo"></a>
@@ -70,4 +82,5 @@
 		</nav>
 	</header>
 </body>
+
 </html>
