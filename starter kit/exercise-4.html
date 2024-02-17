@@ -132,6 +132,45 @@
 		}
 
 		/* Air */
+		nav ul a {
+			transition-property: color;
+			transition-duration: var(--def-);
+		}
+
+		.has-submenu:after {
+			transition-property: opacity;
+		}
+
+		nav ul a,
+		.has-submenu ul:after,
+		.has-submenu ul a,
+		.has-submenu ul a::after,
+		.has-submenu ul {
+			transition-duration: var(--def-transition-duration);
+			transition-timing-function: ease-in-out;
+		}
+
+		.has-submenu ul {
+			opacity: 0;
+			display: block;
+			visibility: hidden;
+			transform: translateX(-1rem);
+			transition-property: opacity, visibility, transform;
+		}
+
+		.has-submenu:hover ul {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0);
+		}
+
+		.has-submenu ul a {
+			transition-property: background-color, padding;
+		}
+
+		.has-submenu ul a::after {
+			transition-property: opacity;
+		}
 	</style>
 </head>
 <body>
