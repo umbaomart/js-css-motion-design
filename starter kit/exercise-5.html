@@ -218,6 +218,18 @@
 			transform: translate3d(0, 0, 0);
 		}
 
+		figure footer img {
+			transform: translate3d(-3rem, 0, 0) rotate(360deg);
+			transition-delay: var(--def-transition-duration);
+			opacity: 0;
+		}
+
+		figure:hover img {
+			transform: translate3d(0, 0, 0) rotate(0);
+			opacity: 1;
+		}
+
+		figure footer img,
 		figure main,
 		figure footer,
 		figure a img,
