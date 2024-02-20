@@ -19,7 +19,19 @@
 		:root {
 			--def-transition-duration: .2s;
 
-			--color-cloudy: #5F7C9C;
+			--color-cloudy: #83a1bb;
+			--color-cloudy-shade: #83a1bb;
+
+			--color-sunny: #83a1bb;
+			--color-sunny-shade: #83a1bb;
+
+			--color-rainy: #83a1bb;
+			--color-rainy-shade: #83a1bb;
+
+			--color-thunderstorms: #83a1bb;
+			--color-thunderstorms-shade: #83a1bb;
+
+			/* --color-cloudy: #5F7C9C;
 			--color-cloudy-shade: #56708c;
 
 			--color-sunny: #3F7ABC;
@@ -29,7 +41,7 @@
 			--color-rainy-shade: #222d38;
 
 			--color-thunderstorms: #101C29;
-			--color-thunderstorms-shade: #0e1925;
+			--color-thunderstorms-shade: #0e1925; */
 		}
 
 		html {
@@ -105,7 +117,7 @@
 		}
 
 		.cloudy {
-			background: var(--color-cloudy) url(/images/cloudy@c.png);
+			background: var(--color-cloudy) url(/images/sunny@c.jpg);
 		}
 
 		.cloudy .readings li {
@@ -113,7 +125,7 @@
 		}
 
 		.sunny {
-			background: var(--color-sunny) url(images/sunny@c.png);
+			background: var(--color-sunny) url(images/sunny@c.jpg);
 		}
 
 		.sunny .readings li {
@@ -121,7 +133,7 @@
 		}
 
 		.rainy {
-			background: var(--color-rainy) url(images/rainy@c.png);
+			background: var(--color-rainy) url(images/sunny@c.jpg);
 		}
 
 		.rainy .readings li {
@@ -129,7 +141,7 @@
 		}
 
 		.thunderstorms {
-			background: var(--color-thunderstorms) url(images/thunderstorms@c.png);
+			background: var(--color-thunderstorms) url(images/sunny@c.jpg);
 		}
 
 		.thunderstorms .readings li {
@@ -248,6 +260,30 @@
 
 
 		/* Air */
+		.accordion--item {
+			transition-property: flex-basis, background-size, padding;
+		}
+
+		.accordion--item {
+			transition-duration: var(--def-transition-duration);
+			transition-timing-function: ease-in-out;
+		}
+
+		.accordion--item:hover:not(.opened) {
+			background-size: 32rem;
+			padding-block: 3rem;
+		}
+
+		.accordion--item:hover:not(.opened) .bottom-temp {
+			transform: translate3d(0, -1rem, 0);
+		}
+
+		.bottom-temp {
+			transition-property: transform;
+			transition-duration: var(--def-transition-duration);
+			transition-timing-function: ease-in-out;
+		}
+
 		/* In the video I'm using the following icons and imagery: */
 		/* - https://elements.envato.com/photo-realistic-weather-icon-set-K7MGJ3 */
 		/* - https://elements.envato.com/weather-icon-pack-3UHW3R3 */
