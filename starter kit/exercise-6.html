@@ -264,6 +264,10 @@
 			transition-property: flex-basis, background-size, padding;
 		}
 
+		.date li:nth-child(2),
+		.bottom-temp,
+		.temp,
+		.readings,
 		.accordion--item {
 			transition-duration: var(--def-transition-duration);
 			transition-timing-function: ease-in-out;
@@ -279,9 +283,27 @@
 		}
 
 		.bottom-temp {
-			transition-property: transform;
+			transition-property: transform, opacity;
 			transition-duration: var(--def-transition-duration);
 			transition-timing-function: ease-in-out;
+		}
+
+		/* .opened .temp, */
+		.opened .readings,
+		.opened .bottom-temp {
+			transform: translate3d(0, 2rem, 0);
+		}
+
+		.date li:nth-child(2) {
+			transition-property: color;
+		}
+
+		.temp {
+			transition: opacity, transform;
+		}
+
+		.temp {
+			transform: translate3d(0, -4rem, 0);
 		}
 
 		/* In the video I'm using the following icons and imagery: */
